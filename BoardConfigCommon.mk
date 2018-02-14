@@ -36,7 +36,7 @@ BOARD_VENDOR := oneplus
 PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
 
 # Use Snapdragon LLVM, if available
-SDCLANG := true
+SDCLANG := false
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8998
