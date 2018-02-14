@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2017 The LineageOS Open Source Project
+#               2018 Citrus-CAF Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -138,7 +139,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@3.2-impl \
-    Snap
+    SnapdragonCamera
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
@@ -266,10 +267,6 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service \
     lights.msm8998
 
-# LiveDisplay native
-PRODUCT_PACKAGES += \
-    libjni_livedisplay
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -358,13 +355,11 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     librmnetctl \
     libxml2 \
-    libprotobuf-cpp-full \
-    telephony-ext
+    libprotobuf-cpp-full
 
 PRODUCT_BOOT_JARS += \
     qcnvitems \
-    qcrilhook \
-    telephony-ext
+    qcrilhook
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -434,7 +429,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
 
 # Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
+#$(call inherit-product, device/oppo/common/common.mk)
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk

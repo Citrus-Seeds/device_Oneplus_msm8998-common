@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2017 The LineageOS Open Source Project
+#               2018 Citrus-CAF Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,7 +24,7 @@
 #
 
 # Inherit from oppo-common
--include device/oppo/common/BoardConfigCommon.mk
+#-include device/oppo/common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/oneplus/msm8998-common
 
@@ -35,7 +36,7 @@ BOARD_VENDOR := oneplus
 PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
 
 # Use Snapdragon LLVM, if available
-TARGET_USE_SDCLANG := true
+SDCLANG := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8998
@@ -165,7 +166,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-WITH_LINEAGE_CHARGER := false
 
 # CNE and DPM
 BOARD_USES_QCNE := true
@@ -228,9 +228,6 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Lineage Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/lineagehw
-
 # NFC
 BOARD_NFC_CHIPSET := PN553
 BOARD_NFC_HAL_SUFFIX := msm8998
@@ -258,7 +255,6 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oneplus
 TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
 # RIL
-TARGET_RIL_VARIANT := caf
 PROTOBUF_SUPPORTED := true
 
 # SELinux
