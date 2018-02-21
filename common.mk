@@ -343,13 +343,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
-# RCS
-PRODUCT_PACKAGES += \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_api \
-    rcs_service_api.xml
-
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_oneplus
@@ -363,8 +356,7 @@ PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
     ims-ext-common \
     librmnetctl \
-    libxml2 \
-    libprotobuf-cpp-full
+    libxml2
 
 PRODUCT_BOOT_JARS += \
     qcnvitems \
