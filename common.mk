@@ -25,6 +25,9 @@
 
 $(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
 
+# To set CAF version
+$(call inherit-product, vendor/citrus/config/common_la.um.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
