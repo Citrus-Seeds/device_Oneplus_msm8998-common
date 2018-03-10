@@ -25,6 +25,9 @@
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# To set CAF version
+$(call inherit-product, vendor/citrus/config/common_la.um.mk)
+
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=16m \
@@ -406,14 +409,11 @@ PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
     ims-ext-common \
     librmnetctl \
-    libxml2 \
-    libprotobuf-cpp-full \
-    telephony-ext
+    libxml2
 
 PRODUCT_BOOT_JARS += \
     qcnvitems \
-    qcrilhook \
-    telephony-ext
+    qcrilhook
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
