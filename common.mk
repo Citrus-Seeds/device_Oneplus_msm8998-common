@@ -472,5 +472,3 @@ PRODUCT_COPY_FILES += \
 # Inherit vendor
 $(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
 
-# System properties
--include $(LOCAL_PATH)/system_prop.mk
